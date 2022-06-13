@@ -1,0 +1,23 @@
+<html>
+<body>
+
+texto: <textArea id="texto" name="texto"></textArea>
+
+
+<script>
+loadDoc();
+
+
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("texto").innerHTML = this.responseText;
+    }
+  xhttp.open("GET", "teste.txt", true);
+  xhttp.send();
+}
+
+</script>
+
+</body>
+</html>
